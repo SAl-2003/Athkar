@@ -1,8 +1,7 @@
 
 
-/* طبق الخط على كل الصفحة */
 body, p, span, button {
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Tahoma', 'Arial', sans-serif;
 }
 
 
@@ -176,6 +175,7 @@ nav button:hover {
   .counter button { width: 44px; height: 44px; font-size: 20px; }
   .counter span { font-size: 13px; }
 }
+
 
 
 
