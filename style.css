@@ -43,16 +43,10 @@ body {
 /* Header */
 header {
   text-align: center;
-  padding: 24px;
-  font-size: 28px;
+  padding: 20px;
+  font-size: 26px;
   font-weight: 700;
   color: #1e293b;
-  animation: fadeDown 1s ease;
-}
-
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Nav Tabs */
@@ -61,10 +55,11 @@ nav {
   justify-content: center;
   gap: 16px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 nav button {
-  padding: 10px 22px;
+  padding: 10px 20px;
   border-radius: 20px;
   border: none;
   font-size: 16px;
@@ -82,6 +77,7 @@ nav button:hover {
 /* Container */
 .container {
   max-width: 850px;
+  width: 95%;
   margin: auto;
   padding: 20px;
 }
@@ -89,33 +85,33 @@ nav button:hover {
 /* بطاقة الذكر */
 .zekr {
   background: rgba(255,255,255,0.97);
-  border-radius: 24px;
-  padding: 24px;
-  margin-bottom: 22px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .zekr:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
 .zekr p {
-  font-size: 20px;
-  line-height: 2.1;
+  font-size: 18px;
+  line-height: 2;
   color: #1f2937;
   margin: 0;
 }
 
 /* فضل الذكر */
 .fadl {
-  margin-top: 16px;
-  padding: 14px 18px;
+  margin-top: 14px;
+  padding: 12px 15px;
   background: #f0f9ff;
-  border-right: 5px solid var(--secondary);
-  border-radius: 14px;
-  font-size: 15px;
+  border-right: 4px solid var(--secondary);
+  border-radius: 12px;
+  font-size: 14px;
   color: #075985;
 }
 
@@ -124,26 +120,28 @@ nav button:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 .counter span {
-  font-size: 15px;
+  font-size: 14px;
   color: #475569;
-  margin-left: 12px;
+  margin-left: 10px;
 }
 
 .counter button {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
   background: conic-gradient(var(--primary) 0deg, #e5e7eb 0deg);
   color: white;
   transition: transform 0.2s ease;
   position: relative;
+  margin-bottom: 8px;
 }
 
 .counter button:hover {
@@ -153,17 +151,17 @@ nav button:hover {
 .counter button::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 48px;
-  height: 48px;
+  top: 3px;
+  left: 3px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #1e293b20;
   z-index: -1;
 }
 
 .done {
-  opacity: 0.55;
+  opacity: 0.6;
 }
 
 /* حركة خلفية ناعمة */
@@ -171,66 +169,28 @@ nav button:hover {
   position: fixed;
   top: -50px;
   left: 10%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.6), transparent);
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255,255,255,0.5), transparent);
   animation: float 12s infinite ease-in-out;
   pointer-events: none;
 }
 
 @keyframes float {
   0% { transform: translateY(0); }
-  50% { transform: translateY(40px); }
+  50% { transform: translateY(35px); }
   100% { transform: translateY(0); }
 }
+
 /* --- تصميم متجاوب للشاشات الصغيرة --- */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
-  header {
-    font-size: 22px;
-    padding: 16px;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  nav button {
-    width: 80%;
-    font-size: 15px;
-  }
-
-  .container {
-    padding: 12px;
-  }
-
-  .zekr {
-    padding: 16px;
-    margin-bottom: 16px;
-  }
-
-  .zekr p {
-    font-size: 17px;
-    line-height: 1.6;
-  }
-
-  .fadl {
-    font-size: 14px;
-    padding: 10px 12px;
-  }
-
-  .counter button {
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
-  }
-
-  .counter span {
-    font-size: 14px;
-  }
+  header { font-size: 22px; padding: 16px; }
+  nav button { width: 90%; font-size: 15px; }
+  .container { padding: 12px; }
+  .zekr { padding: 14px; margin-bottom: 16px; }
+  .zekr p { font-size: 16px; line-height: 1.6; }
+  .fadl { font-size: 13px; padding: 10px 12px; }
+  .counter button { width: 44px; height: 44px; font-size: 20px; }
+  .counter span { font-size: 13px; }
 }
 
