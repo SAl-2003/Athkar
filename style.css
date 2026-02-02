@@ -183,3 +183,54 @@ nav button:hover {
   50% { transform: translateY(40px); }
   100% { transform: translateY(0); }
 }
+/* --- تصميم متجاوب للشاشات الصغيرة --- */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    font-size: 22px;
+    padding: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav button {
+    width: 80%;
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .zekr {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .zekr p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .fadl {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .counter button {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .counter span {
+    font-size: 14px;
+  }
+}
+
