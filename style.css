@@ -18,10 +18,11 @@
   font-style: normal;
 }
 
+/* طبق الخط على كل الصفحة */
 body, p, span, button {
-  font-family: 'Cairo', sans-serif !important;
-  margin: 0;
+  font-family: 'Cairo', sans-serif;
 }
+
 
 /* ثيمات */
 :root {
@@ -193,4 +194,5 @@ nav button:hover {
   .counter button { width: 44px; height: 44px; font-size: 20px; }
   .counter span { font-size: 13px; }
 }
+
 
